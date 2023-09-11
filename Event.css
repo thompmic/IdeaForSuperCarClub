@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Universal style for all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header style */
+header{
+    z-index: 999;  /* Sets the stack order of the header */
+    position: absolute; /* Positions the header at a specified position */
+    top: 0;
+    left: 0;
+    width: 100%; /* Sets the width of the header */
+    display: flex; /* Sets the display type to flex */
+    justify-content: space-between; /* Distributes items evenly in the header */
+    align-items: center; /* Vertically aligns items in the center */
+    padding: 15px 200px; /* Sets the padding of the header */
+    transition: 0.5s ease; /* Adds animation to some properties */
+}
+
+/* Brand style inside the header */
+header .brand{
+    color: #ed0000;  /* Sets the color of the text */
+    font-size: 1.5em; /* Sets the font size of the text */
+    font-weight: 700; /* Sets the font weight of the text */
+    text-transform: uppercase; /* Converts text to uppercase */
+    text-decoration: none; /* Removes underline from links */
+}
+
+/* Navigation style inside the header */
+header .navigation{
+    position: relative; /* Positions the navigation at a normal position */
+}
+
+/* Styling for the "a" element in ".navigation-items" class within ".navigation" class inside "header" */
+header .navigation .navigation-items a{
+    position: relative; /* Sets the position of the element */
+    color: #ee0b0b; /* Sets the font color */
+    font-size: 1em; /* Sets the font size */
+    font-weight: 500; /* Sets the font weight */
+    text-decoration: none; /* Removes the underline from the link */
+    margin-left:30px; /* Sets the left margin */
+    transition: 0.3s ease; /* Adds animation to some properties */
+}
+
+/* Styling for the "before" pseudo-element of "a" in ".navigation-items" class within ".navigation" class inside "header" */
+header .navigation .navigation-items a:before{
+    content: ''; /* Inserts generated content */
+    position: absolute; /* Sets the position of the element */
+    background: #000; /* Sets the background color */
+    width: 0%; /* Sets the width of the element */
+    height: 3px; /* Sets the height of the element */
+    bottom: 0; /* Positions the element at the bottom */
+    left: 0; /* Positions the element to the left */
+    transition: 0.3s ease; /* Adds animation to some properties */
+}
+
+/* Styling for the "before" pseudo-element of "a" on hover in ".navigation-items" class within ".navigation" class inside "header" */
+header .navigation .navigation-items a:hover:before{
+    width: 100%; /* Sets the width of the element to 100% when hovered */
+}
+
+
+/* Set the font family for the entire page to 'Poppins', sans-serif */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Add padding to the timeline section to create space at the top */
+.timeline {
+    padding: 100px 0px; 
+}
+
+/* Adjust the position and margins of the carousel */
+.carousel {
+    margin-top: 14%;
+    margin-left: -50px;
+    position: relative;
+}
+
+/* Adjust the position and width of the carousel indicators */
+.carousel-indicators {
+    top: 200px;
+    width: 150%;
+    margin-left: 14%;
+    position: static;
+    margin-bottom: 40px;
+}
+
+/* Adjust the padding of the experience-slide-one to move the image slightly to the left */
+.experience-slide-one {
+    padding: 0px 50px; /* Increased left padding */
+}
+
+/* Style the carousel indicators buttons */
+.carousel-indicators button {
+    text-indent: 0!important;
+    background: 0 0;
+    border: none;
+    margin: 0!important;
+    position: relative;
+    width: 25%!important;
+}
+
+/* Add a horizontal line before the carousel indicators buttons */
+.carousel-indicators button:before {
+    position: absolute;
+    content: "";
+    border-top: 2px solid #c8cbd0;
+    width: 100%;
+    left: 0;
+} 
+
+/* Adjust the position of the h4 element within the carousel indicators buttons */
+.carousel-indicators button h4 {
+    margin-top: -41px;
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);   
+}
+
+.carousel-indicators button i {
+    margin-top: -8px;
+    position: absolute;
+}
+.carousel-indicators button.active i{
+    color:#2ecc71;
+}
+.carousel-indicators button.active h4{
+    color:#2ecc71;
+    font-size: 34px;
+    position: absolute;
+    text-align: center;
+    margin-top:-49px;
+}
+.experience-slide-text h3{
+    margin-bottom: 30px;
+    font-size: 27px;
+    color: #da3b3b;
+}
+
+.carousel-control-next,.carousel-control-prev{
+    width: 2%;
+    opacity: .8;
+}
+
+.carousel-control-next i,.carousel-control-prev-icon i{
+    font-size: 30px;
+    color:#333;
+}
+

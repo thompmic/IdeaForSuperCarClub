@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta data -->
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design settings -->
+
+    <!-- Title of the webpage -->
+    <title>SuperCars Only</title> <!-- Defines the title of the document -->
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css"> <!-- Links to your main stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> <!-- Links to the font-awesome library -->
+
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Brand name -->
+        <a href="#" class="brand">Festival.del.tors</a> <!-- Link to the brand's main page -->
+        <div class="menu-btn"></div>
+        <!-- Navigation bar -->
+        <div class="navigation">
+            <!-- Navigation items -->
+            <div class="navigation-items">
+                <!-- Each link in the navigation bar -->
+                <a href="Home.html">Home</a> <!-- Home page -->
+                <a href="#">Members</a> <!-- Members page -->
+                <a href="CarGallery.html">Cars Gallery</a> <!-- Cars gallery page -->
+                <a href="Event.html">Events</a> <!-- Join page -->
+                <a href="#">About</a> <!-- About page -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Home section -->
+    <section class="home">
+        <video  class= "video-slide active"   src="lam1.mp4" autoplay muted loop></video>
+        <video  class= "video-slide"   src="lam2.mp4" autoplay muted loop></video>
+        <video  class= "video-slide"   src="lam3.mp4" autoplay muted loop></video>
+        <video  class= "video-slide"   src="lam4.mp4" autoplay muted loop></video>
+        <video  class= "video-slide"   src="lam5.mp4" autoplay muted loop></video>
+        <!-- Content section -->
+        <div class="content active"> 
+            <!-- Header and subheader -->
+            <h1>Festival.DEL.TORS<br><span>True Lamborghini enthusiast</span></h1>
+            <!-- Text paragraph -->
+            <p>Just hop in and drive to understand that the lamborghini is different from all the other SuperCars, as it was designed with one thing in mind: to be the fastest.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content"> 
+            <!-- Header and subheader -->
+            <h1>LAMBORGHINI.<br><span>RALLY DRIVE</span></h1>
+            <!-- Text paragraph -->
+            <p>Just hop in and drive to understand that the lamborghini is different from all the other SuperCars, as it was designed with one thing in mind: to be the fastest.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content"> 
+            <!-- Header and subheader -->
+            <h1>lAMBO BOYS.<br><span>LAMBORGHINI ONLY</span></h1>
+            <!-- Text paragraph -->
+            <p>Just hop in and drive to understand that the lamborghini is different from all the other SuperCars, as it was designed with one thing in mind: to be the fastest.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content"> 
+            <!-- Header and subheader -->
+            <h1>1 OF 1.<br><span>SHOWCASE</span></h1>
+            <!-- Text paragraph -->
+            <p>Just hop in and drive to understand that the lamborghini is different from all the other SuperCars, as it was designed with one thing in mind: to be the fastest.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="content"> 
+            <!-- Header and subheader -->
+            <h1>THE CREW.<br><span> THE FAMILY</span></h1>
+            <!-- Text paragraph -->
+            <p>Just hop in and drive to understand that the lamborghini is different from all the other SuperCars, as it was designed with one thing in mind: to be the fastest.</p>
+            <a href="#">Read More</a>
+        </div>
+        <!-- Social media links -->
+        <div class="media-icons">
+            <!-- Facebook, Instagram and Twitter links -->
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/festival.del.toro/reels/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>           
+        </div>
+        <div class="slider-navigation">
+            <div class="nav-btn active"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click", () => {
+            menuBtn.classList.toggle("active");
+            navigation.classList.toggle("active");
+        });
+
+        //js for video slider nav
+        const btns= document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll(".content");
+
+        var sliderrNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classList.remove("active");
+            });
+            
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classList.remove("active");
+            });
+
+            btns[manual].classList.add("active");   
+            slides[manual].classList.add("active");
+            contents[manual].classList.add("active");        
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                sliderrNav(i);
+            });
+        });
+    </script>
+</body>
+</html>
